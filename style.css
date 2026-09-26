@@ -134,6 +134,38 @@ tbody tr:nth-child(even) {
 tbody{
   font-family: Roboto;
 }
+.questions {
+  width: 100%;
+  border-top: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questions .qa-card {
+  margin-bottom: 1px;
+  padding: 5px 0;
+  border-top: 0.5px solid;
+  border-bottom: 0.5px solid;
+  background-color: #faffff;
+}
+.questions .qa-card .question {
+  margin-bottom: 1px;
+  padding: 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.questions .qa-card .question .q-no{
+  color: #b40404;
+  font-weight: 900;
+}
+.questions .qa-card .answer {
+  padding: 0 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.questions .qa-card .answer .a-no{
+  color: #117a3d;
+}
 footer{
   margin: 0 5px;
   padding: 0 5px;
