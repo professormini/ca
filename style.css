@@ -93,7 +93,6 @@ input:hover{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  overflow-x: scroll;
   }
 main{
   margin-bottom: 5px;
