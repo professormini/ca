@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May 2026</title>
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="main-header">
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="https://lh3.googleusercontent.com/d/1RAAdWJH-ZAp9-19ZvBLSdG3I83iKA0xB" alt="Logo" width="45px">
+          <h1 class="logo-text">proff. MINI</h1>
+        </a>
+      <div class="social-icon">
+        <a class="instagram" href="https://www.instagram.com/proff.mini"><i class="fa-brands fa-instagram" style="color: #ff38c3ff;"></i></a>
+        <a class="telegram" href="https://t.me/profmini"><i class="fa-brands fa-telegram" style="color: #41ABFF;"></i></a>
+      </div>
+    </div>
+    <div class="title">
+      <h3>May 2026</h3>
+    </div>
+  </header>
+  <div class="questions">
+    <div id="question"></div>
+  </div>
+  <footer>
+    <button class="go-to-top" onclick="goToTop()">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+  <script>
+  const questionData = [
+  { id: 1, question: "মে 2026-এ পশ্চিমবঙ্গের নতুন মুখ্যমন্ত্রী হিসেবে কে শপথ নেন?", answer: "শুভেন্দু অধিকারী।" },
+  { id: 2, question: "2026-এর পশ্চিমবঙ্গ বিধানসভা নির্বাচনে বিজেপি কতটি আসন জেতে?", answer: "207টি।" },
+  { id: 3, question: "2026-এর তামিলনাড়ু বিধানসভা নির্বাচনে তামিলাগা ভেট্রি কাজাগম কতটি আসন জেতে?", answer: "108টি।" },
+  { id: 4, question: "2026-এ তামিলনাড়ুর মুখ্যমন্ত্রী কে হন?", answer: "সি. জোসেফ বিজয়।" },
+  { id: 5, question: "2026-এ কেরলের মুখ্যমন্ত্রী হিসেবে কে দায়িত্ব নেন?", answer: "ভি. ডি. সতীশন।" },
+  { id: 6, question: "2026-এ কোস্টারিকার দ্বিতীয় মহিলা রাষ্ট্রপতি কে হন?", answer: "লরা ফার্নান্দেজ দেলগাদো।" },
+  { id: 7, question: "2026-এ হাঙ্গেরির প্রধানমন্ত্রী কে হন?", answer: "পিটার ম্যাগিয়ার।" },
+  { id: 8, question: "2026-এ ভারতের নতুন চিফ অফ ডিফেন্স স্টাফ কে হন?", answer: "লেফটেন্যান্ট জেনারেল এন. এস. রাজা সুব্রামণি।" },
+  { id: 9, question: "এন. এস. রাজা সুব্রামণি কার স্থলাভিষিক্ত হন?", answer: "জেনারেল অনিল চৌহান।" },
+  { id: 10, question: "ভারতের প্রথম চিফ অফ ডিফেন্স স্টাফ কে ছিলেন?", answer: "জেনারেল বিপিন রাওয়াত।" },
+  { id: 11, question: "2026-এ ভারতের নতুন নৌবাহিনী প্রধান কে হন?", answer: "অ্যাডমিরাল কৃষ্ণ স্বামীনাথন।" },
+  { id: 12, question: "কৃষ্ণ স্বামীনাথন ভারতের কততম নৌবাহিনী প্রধান?", answer: "27তম." },
+  { id: 13, question: "মে 2026-এ RBI-এর নতুন ডেপুটি গভর্নর কে হন?", answer: "রোহিত জৈন।" },
+  { id: 14, question: "রোহিত জৈন কার স্থলাভিষিক্ত হন?", answer: "টি. রবি শঙ্কর।" },
+  { id: 15, question: "মে 2026-এ MSME মন্ত্রকের সচিব কে হন?", answer: "ভারত খেরা।" },
+  { id: 16, question: "মে 2026-এ ওমানে ভারতের রাষ্ট্রদূত হিসেবে কাকে নিয়োগ করা হয়?", answer: "প্রশান্ত পিসে।" },
+  { id: 17, question: "মে 2026-এ যুক্তরাজ্যে ভারতের নতুন হাইকমিশনার কে হন?", answer: "পি. কুমারন।" },
+  { id: 18, question: "CBFC-এর নতুন চেয়ারপার্সন কে হন?", answer: "শশী শেখর ভেমপতি।" },
+  { id: 19, question: "প্রসার ভারতীর নতুন চেয়ারম্যান কে হন?", answer: "প্রসূন জোশী।" },
+  { id: 20, question: "UIDAI-এর নতুন CEO কে হন?", answer: "সৌরভ বিজয়।" },
+  { id: 21, question: "HAL-এর 22তম চেয়ারম্যান ও ব্যবস্থাপনা পরিচালক কে হন?", answer: "রবি কে." },
+  { id: 22, question: "2026-এ রাজ্যসভার যাচিকা কমিটির চেয়ারম্যান কে হন?", answer: "রাঘব চাড্ডা।" },
+  { id: 23, question: "লোকলেখা কমিটির চেয়ারম্যান হিসেবে কে পুনর্নিযুক্ত হন?", answer: "কে. সি. বেণুগোপাল।" },
+  { id: 24, question: "সুপ্রিম কোর্টে প্রধান বিচারপতিসহ বিচারপতির অনুমোদিত সংখ্যা কত করা হয়?", answer: "38." },
+  { id: 25, question: "আন্তর্জাতিক বুকার পুরস্কার 2026 কোন বই পায়?", answer: "তাইওয়ান ট্রাভেলোগ।" },
+  { id: 26, question: "আন্তর্জাতিক বুকার পুরস্কার 2026-এর লেখক কে?", answer: "ইয়াং শুয়াং-জি।" },
+  { id: 27, question: "তাইওয়ান ট্রাভেলোগ-এর ইংরেজি অনুবাদক কে?", answer: "লিন কিং।" },
+  { id: 28, question: "আন্তর্জাতিক বুকার পুরস্কার 2026-এর পুরস্কারমূল্য কত?", answer: "£50,000." },
+  { id: 29, question: "আন্তর্জাতিক বুকার পুরস্কার জয়ী প্রথম ম্যান্ডারিন-চীনা ভাষার বই কোনটি?", answer: "তাইওয়ান ট্রাভেলোগ।" },
+  { id: 30, question: "আন্তর্জাতিক বুকার পুরস্কার 2025 কে জেতেন?", answer: "বানু মুস্তাক ও দীপা ভাস্তি।" },
+  { id: 31, question: "2025-এর আন্তর্জাতিক বুকার পুরস্কার কোন বইয়ের জন্য দেওয়া হয়?", answer: "হার্ট ল্যাম্প।" },
+  { id: 32, question: "হার্ট ল্যাম্প কোন ভাষার বই?", answer: "কন্নড়।" },
+  { id: 33, question: "2026-এর থমাস কাপ কে জেতে?", answer: "চীন।" },
+  { id: 34, question: "2026-এর থমাস কাপের রানার্স-আপ কোন দেশ?", answer: "ফ্রান্স।" },
+  { id: 35, question: "থমাস কাপ 2026-এ ভারত কোন পদক জেতে?", answer: "ব্রোঞ্জ।" },
+  { id: 36, question: "থমাস কাপ 2026 কোথায় অনুষ্ঠিত হয়?", answer: "হর্সেন্স, ডেনমার্ক।" },
+  { id: 37, question: "থমাস কাপ কোন খেলার প্রতিযোগিতা?", answer: "পুরুষদের ব্যাডমিন্টন।" },
+  { id: 38, question: "2026-এর উবার কাপ কে জেতে?", answer: "দক্ষিণ কোরিয়া।" },
+  { id: 39, question: "উবার কাপ 2026-এর রানার্স-আপ কোন দেশ?", answer: "চীন।" },
+  { id: 40, question: "উবার কাপ কোন খেলার মহিলাদের প্রতিযোগিতা?", answer: "ব্যাডমিন্টন।" },
+  { id: 41, question: "2025-26 লা লিগার চ্যাম্পিয়ন কে?", answer: "বার্সেলোনা।" },
+  { id: 42, question: "বার্সেলোনা 2025-26 মরশুমে কততম লা লিগা শিরোপা জেতে?", answer: "29তম." },
+  { id: 43, question: "2026 মাদ্রিদ ওপেন পুরুষ এককের চ্যাম্পিয়ন কে?", answer: "ইয়ানিক সিনার।" },
+  { id: 44, question: "2026 মাদ্রিদ ওপেন পুরুষ এককের রানার্স-আপ কে?", answer: "আলেকজান্ডার জভেরেভ।" },
+  { id: 45, question: "2026 মাদ্রিদ ওপেন মহিলা এককের বিজয়ী কে?", answer: "মার্তা কোস্তিউক।" },
+  { id: 46, question: "2026 ইটালিয়ান ওপেন পুরুষ এককের বিজয়ী কে?", answer: "ইয়ানিক সিনার।" },
+  { id: 47, question: "2026 ইটালিয়ান ওপেন মহিলা এককের বিজয়ী কে?", answer: "এলিনা স্ভিতোলিনা।" },
+  { id: 48, question: "2026 এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ কোথায় অনুষ্ঠিত হয়?", answer: "গান্ধীনগর, গুজরাট।" },
+  { id: 49, question: "এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ 2026-এ ভারত মোট কতটি পদক জেতে?", answer: "10টি।" },
+  { id: 50, question: "এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ 2026-এ ভারতের পদক বিভাজন কী?", answer: "1টি রুপো ও 9টি ব্রোঞ্জ।" },
+  { id: 51, question: "এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ 2026-এ ভারতের একমাত্র রুপোর পদকজয়ী কে?", answer: "জ্ঞানেশ্বরী যাদব।" },
+  { id: 52, question: "এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ 2026-এর পদক তালিকায় শীর্ষে কোন দেশ?", answer: "চীন।" },
+  { id: 53, question: "এশিয়ান ওয়েটলিফটিং চ্যাম্পিয়নশিপ 2026-এ চীন মোট কতটি পদক জেতে?", answer: "41টি।" },
+  { id: 54, question: "2026 এশিয়ান বিচ গেমস কোথায় অনুষ্ঠিত হয়?", answer: "সানিয়া, চীন।" },
+  { id: 55, question: "2026 এশিয়ান বিচ গেমসে ভারত মোট কতটি পদক জেতে?", answer: "6টি।" },
+  { id: 56, question: "এশিয়ান বিচ গেমস 2026-এ ভারতীয় মহিলা কবাডি দল কোন পদক জেতে?", answer: "স্বর্ণপদক।" },
+  { id: 57, question: "এশিয়ান বিচ গেমস 2026-এ ভারতীয় পুরুষ কবাডি দল কোন পদক জেতে?", answer: "রুপোর পদক।" },
+  { id: 58, question: "বিশ্ব ফুটবল দিবস 2026 কবে পালিত হয়?", answer: "25 মে।" },
+  { id: 59, question: "বিশ্ব ফুটবল সপ্তাহ 2026 কবে পালিত হয়?", answer: "21 থেকে 25 মে।" },
+  { id: 60, question: "বিশ্ব ফুটবল সপ্তাহ 2026-এর প্রতিপাদ্য কী?", answer: "Be Active, Play for Health, Play for Joy." },
+  { id: 61, question: "বিশ্ব পরিযায়ী পাখি দিবস 2026 কবে পালিত হয়?", answer: "9 মে ও 10 অক্টোবর।" },
+  { id: 62, question: "বিশ্ব পরিযায়ী পাখি দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Every Bird Counts – Your Observations Matter." },
+  { id: 63, question: "বিশ্ব রেড ক্রস ও রেড ক্রিসেন্ট দিবস 2026 কবে পালিত হয়?", answer: "8 মে।" },
+  { id: 64, question: "বিশ্ব রেড ক্রস দিবস 2026-এর প্রতিপাদ্য কী?", answer: "United in Humanity." },
+  { id: 65, question: "আন্তর্জাতিক উদ্ভিদ স্বাস্থ্য দিবস 2026 কবে পালিত হয়?", answer: "12 মে।" },
+  { id: 66, question: "আন্তর্জাতিক উদ্ভিদ স্বাস্থ্য দিবস 2026-এর মূল বার্তা কী?", answer: "খাদ্য নিরাপত্তার ভিত্তি হিসেবে উদ্ভিদ জৈবনিরাপত্তা।" },
+  { id: 67, question: "আন্তর্জাতিক জীববৈচিত্র্য দিবস 2026 কবে পালিত হয়?", answer: "22 মে।" },
+  { id: 68, question: "আন্তর্জাতিক জীববৈচিত্র্য দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Acting Locally for Global Impact." },
+  { id: 69, question: "বিশ্ব উচ্চ রক্তচাপ দিবস 2026 কবে পালিত হয়?", answer: "17 মে।" },
+  { id: 70, question: "বিশ্ব উচ্চ রক্তচাপ দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Controlling Hypertension Together." },
+  { id: 71, question: "বিশ্ব হাত পরিচ্ছন্নতা দিবস 2026 কবে পালিত হয়?", answer: "5 মে।" },
+  { id: 72, question: "বিশ্ব হাত পরিচ্ছন্নতা দিবস 2026-এর স্লোগান কী?", answer: "Action Saves Lives." },
+  { id: 73, question: "বিশ্ব থ্যালাসেমিয়া দিবস 2026 কবে পালিত হয়?", answer: "8 মে।" },
+  { id: 74, question: "বিশ্ব থ্যালাসেমিয়া দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Hidden No More: Finding the Undiagnosed. Supporting the Unseen." },
+  { id: 75, question: "বিশ্ব প্রেস স্বাধীনতা দিবস 2026 কবে পালিত হয়?", answer: "3 মে।" },
+  { id: 76, question: "বিশ্ব প্রেস স্বাধীনতা দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Shaping a Future at Peace: Promoting Press Freedom for Human Rights, Development, and Security." },
+  { id: 77, question: "বিশ্ব প্রেস স্বাধীনতা দিবস 2026-এর বৈশ্বিক সম্মেলন কোথায় অনুষ্ঠিত হয়?", answer: "লুসাকা, জাম্বিয়া।" },
+  { id: 78, question: "বিশ্ব অ্যাজমা দিবস 2026 কবে পালিত হয়?", answer: "5 মে।" },
+  { id: 79, question: "বিশ্ব অ্যাজমা দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Access to anti-inflammatory inhalers for everyone with asthma – still an urgent need." },
+  { id: 80, question: "বিশ্ব মেট্রোলজি দিবস 2026 কবে পালিত হয়?", answer: "20 মে।" },
+  { id: 81, question: "বিশ্ব মেট্রোলজি দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Metrology: Building Trust in Policy Making." },
+  { id: 82, question: "আন্তর্জাতিক পরিবার দিবস 2026 কবে পালিত হয়?", answer: "15 মে।" },
+  { id: 83, question: "আন্তর্জাতিক পরিবার দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Families, Inequalities and Child Well-being." },
+  { id: 84, question: "জাতীয় প্রযুক্তি দিবস 2026 কবে পালিত হয়?", answer: "11 মে।" },
+  { id: 85, question: "জাতীয় প্রযুক্তি দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Responsible Innovation for Inclusive Growth." },
+  { id: 86, question: "আন্তর্জাতিক শ্রমিক দিবস 2026 কবে পালিত হয়?", answer: "1 মে।" },
+  { id: 87, question: "2026-এর আন্তর্জাতিক শ্রমিক দিবসের প্রতিপাদ্য কী?", answer: "স্বাস্থ্যকর মনোসামাজিক কর্মপরিবেশ নিশ্চিত করা।" },
+  { id: 88, question: "বিশ্ব কচ্ছপ দিবস 2026 কবে পালিত হয়?", answer: "23 মে।" },
+  { id: 89, question: "বিশ্ব কচ্ছপ দিবস 2026-এর প্রতিপাদ্য কী?", answer: "Turtle Protector Pledge." },
+  { id: 90, question: "আন্তর্জাতিক আলোক দিবস কবে পালিত হয়?", answer: "16 মে।" },
+  { id: 91, question: "আন্তর্জাতিক নার্স দিবস কবে পালিত হয়?", answer: "12 মে।" },
+  { id: 92, question: "প্রধানমন্ত্রী মৎস্য সম্পদ যোজনা কোন মন্ত্রকের অধীন?", answer: "মৎস্য, পশুপালন ও দুগ্ধ মন্ত্রক।" },
+  { id: 93, question: "প্রধানমন্ত্রী মৎস্য সম্পদ যোজনা কবে শুরু হয়?", answer: "10 সেপ্টেম্বর 2020." },
+  { id: 94, question: "ভারতের প্রথম মোতি পালন কেন্দ্র কোথায় স্থাপিত হয়?", answer: "হাজরিবাগ, ঝাড়খণ্ড।" },
+  { id: 95, question: "ভারতের প্রথম গ্রিন মিথানল প্রকল্প কোথায় স্থাপিত হচ্ছে?", answer: "দীনদয়াল বন্দর, কাণ্ডলা, গুজরাট।" },
+  { id: 96, question: "গ্রিন মিথানল প্রকল্পে কোন আগাছাকে কাঁচামাল হিসেবে ব্যবহার করা হচ্ছে?", answer: "প্রসোপিস জুলিফ্লোরা।" },
+  { id: 97, question: "প্রসোপিস জুলিফ্লোরার প্রচলিত ভারতীয় নাম কী?", answer: "বিলায়তি বাবুল।" },
+  { id: 98, question: "ভারতের 18তম রেলওয়ে জোনের নাম কী?", answer: "দক্ষিণ তটীয় রেলওয়ে।" },
+  { id: 99, question: "দক্ষিণ তটীয় রেলওয়ের সদর দপ্তর কোথায়?", answer: "বিশাখাপত্তনম।" },
+  { id: 100, question: "দক্ষিণ তটীয় রেলওয়ের কার্যকর তারিখ কী?", answer: "1 জুন 2026." },
+  { id: 101, question: "গঙ্গা এক্সপ্রেসওয়ের দৈর্ঘ্য কত?", answer: "প্রায় 594 কিলোমিটার।" },
+  { id: 102, question: "গঙ্গা এক্সপ্রেসওয়ে কোন দুই শহরকে যুক্ত করে?", answer: "মেরঠ ও প্রয়াগরাজ।" },
+  { id: 103, question: "গঙ্গা এক্সপ্রেসওয়ে কবে উদ্বোধন করা হয়?", answer: "29 এপ্রিল 2026." },
+  { id: 104, question: "গঙ্গা এক্সপ্রেসওয়ে কোথা থেকে উদ্বোধন করা হয়?", answer: "হরদই জেলার বিলগ্রাম তহসিলের শ্যামপুর গ্রাম থেকে।" },
+  { id: 105, question: "PM MITRA-এর প্রথম কার্যকর পার্ক কোথায় উদ্বোধন হয়?", answer: "ওয়ারাঙ্গল, তেলেঙ্গানা।" },
+  { id: 106, question: "PM MITRA পার্কের ওয়ারাঙ্গল প্রকল্পে বিনিয়োগ কত?", answer: "₹1695.54 কোটি।" },
+  { id: 107, question: "PM MITRA-এর 5F ধারণার প্রথম ধাপ কী?", answer: "Farm to Fibre." },
+  { id: 108, question: "PM MITRA-এর 5F ধারণার শেষ ধাপ কী?", answer: "Fashion to Foreign." },
+  { id: 109, question: "PM SHRI-এর পূর্ণরূপ কী?", answer: "Pradhan Mantri Schools for Rising India." },
+  { id: 110, question: "PM SHRI প্রকল্পের লক্ষ্য কতটি বিদ্যালয়কে মডেল স্কুলে রূপান্তর করা?", answer: "14,500-এর বেশি।" },
+  { id: 111, question: "মে 2026-এ কোন রাজ্য PM SHRI বাস্তবায়নে কেন্দ্রের সঙ্গে সমঝোতা করে?", answer: "পশ্চিমবঙ্গ।" },
+  { id: 112, question: "JANANI-এর পূর্ণরূপ কী?", answer: "Journey of Antenatal, Natal and Neonatal Integrated Care." },
+  { id: 113, question: "JANANI প্ল্যাটফর্ম কোন মন্ত্রক চালু করে?", answer: "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রক।" },
+  { id: 114, question: "JANANI প্ল্যাটফর্ম কবে চালু হয়?", answer: "7 মে 2026." },
+  { id: 115, question: "Mission SEHAT-এর পূর্ণরূপ কী?", answer: "Science Excellence for Health through Agricultural Transformation." },
+  { id: 116, question: "Mission SEHAT কোন দুই সংস্থার যৌথ উদ্যোগ?", answer: "ICMR ও ICAR." },
+  { id: 117, question: "Mission SEHAT কবে চালু হয়?", answer: "11 মে 2026." },
+  { id: 118, question: "Mission for Cotton Productivity-এর অনুমোদিত আর্থিক বরাদ্দ কত?", answer: "₹5659.22 কোটি।" },
+  { id: 119, question: "Mission for Cotton Productivity কোন সময়কালের জন্য?", answer: "2026-27 থেকে 2030-31." },
+  { id: 120, question: "Cotton Productivity Mission-এর সঙ্গে সরকারের কোন 5F ধারণা যুক্ত?", answer: "Farm to Fibre to Factory to Fashion to Foreign." },
+  { id: 121, question: "59তম এশীয় উন্নয়ন ব্যাংক বার্ষিক সভা কোথায় অনুষ্ঠিত হয়?", answer: "সমরকন্দ, উজবেকিস্তান।" },
+  { id: 122, question: "59তম ADB বার্ষিক সভা কবে অনুষ্ঠিত হয়?", answer: "3 থেকে 6 মে 2026." },
+  { id: 123, question: "59তম ADB বার্ষিক সভার প্রতিপাদ্য কী?", answer: "Crossroads of Progress: Advancing the Region’s Connected Future." },
+  { id: 124, question: "IIT মাদ্রাজের প্রথম মার্কিন গবেষণা কেন্দ্র কোথায় স্থাপিত হয়?", answer: "মেনলো পার্ক, ক্যালিফোর্নিয়া।" },
+  { id: 125, question: "দ্বিতীয় Joint Commanders’ Conference 2026 কোথায় অনুষ্ঠিত হয়?", answer: "জয়পুর, রাজস্থান।" },
+  { id: 126, question: "দ্বিতীয় Joint Commanders’ Conference 2026-এর প্রতিপাদ্য কী?", answer: "Military Capability in New Domains." },
+  { id: 127, question: "11তম NPT Review Conference 2026 কোথায় অনুষ্ঠিত হয়?", answer: "নিউ ইয়র্ক।" },
+  { id: 128, question: "11তম NPT Review Conference 2026 কবে অনুষ্ঠিত হয়?", answer: "27 এপ্রিল থেকে 22 মে 2026." },
+  { id: 129, question: "ভারত-জাপান কোয়ান্টাম প্রযুক্তি সহযোগিতার আশয়পত্র কবে স্বাক্ষরিত হয়?", answer: "4 মে 2026." },
+  { id: 130, question: "ভারত-জাপান কোয়ান্টাম সহযোগিতার মূল ক্ষেত্র কী?", answer: "কোয়ান্টাম বিজ্ঞান, প্রযুক্তি ও উদ্ভাবন।" },
+  { id: 131, question: "ভারতের কৌশলগত পেট্রোলিয়াম ভাণ্ডারে 30 মিলিয়ন ব্যারেল পর্যন্ত অপরিশোধিত তেল রাখার চুক্তি কোন দেশের সঙ্গে হয়?", answer: "সংযুক্ত আরব আমিরশাহি।" },
+  { id: 132, question: "ভারতের কৌশলগত পেট্রোলিয়াম ভাণ্ডারের মোট ধারণক্ষমতা কত?", answer: "5.33 মিলিয়ন মেট্রিক টন।" },
+  { id: 133, question: "ভারতের প্রথম AI-চালিত ফিজিটাল ব্যাংক শাখা কোথায় চালু হয়?", answer: "গুয়াহাটি।" },
+  { id: 134, question: "ভারতের প্রথম AI-চালিত ফিজিটাল ব্যাংক শাখা কোন ব্যাংকের?", answer: "স্লাইস স্মল ফাইন্যান্স ব্যাংক।" },
+  { id: 135, question: "ভারতের প্রথম AI-চালিত ফিজিটাল ব্যাংক শাখার উদ্বোধন কে করেন?", answer: "হিমন্ত বিশ্ব শর্মা।" },
+  { id: 136, question: "SMILE মিশন কোন দুই সংস্থার যৌথ মহাকাশ মিশন?", answer: "ESA ও CAS." },
+  { id: 137, question: "SMILE-এর পূর্ণরূপ কী?", answer: "Solar wind Magnetosphere Ionosphere Link Explorer." },
+  { id: 138, question: "SMILE মিশন কবে উৎক্ষেপিত হয়?", answer: "19 মে 2026." },
+  { id: 139, question: "SMILE মিশন কোন রকেটে উৎক্ষেপিত হয়?", answer: "Vega-C." },
+  { id: 140, question: "SMILE মিশন কোথা থেকে উৎক্ষেপিত হয়?", answer: "ফ্রেঞ্চ গায়ানার ইউরোপের স্পেসপোর্ট থেকে।" },
+  { id: 141, question: "SMILE মিশনের নির্ধারিত বৈজ্ঞানিক পর্যবেক্ষণকাল কত?", answer: "3 বছর।" },
+  { id: 142, question: "GalaxEye-এর OptoSAR উপগ্রহের নাম কী?", answer: "দৃষ্টি।" },
+  { id: 143, question: "দৃষ্টি উপগ্রহ কোন রকেটে উৎক্ষেপিত হয়?", answer: "Falcon 9." },
+  { id: 144, question: "OptoSAR প্রযুক্তি কী একত্রিত করে?", answer: "বৈদ্যুতিন-অপটিক্যাল ও সিন্থেটিক অ্যাপারচার রাডার সেন্সর।" },
+  { id: 145, question: "Chandrayaan-3 কোন পুরস্কার পায়?", answer: "2026 Goddard Astronautics Award." },
+  { id: 146, question: "Chandrayaan-3-কে Goddard Astronautics Award কোন সংস্থা দেয়?", answer: "AIAA." },
+  { id: 147, question: "Chandrayaan-3 কবে উৎক্ষেপিত হয়?", answer: "14 জুলাই 2023." },
+  { id: 148, question: "Chandrayaan-3 কবে চাঁদে অবতরণ করে?", answer: "23 আগস্ট 2023." },
+  { id: 149, question: "Chandrayaan-3 কোন রকেটে উৎক্ষেপিত হয়?", answer: "LVM3-M4." },
+  { id: 150, question: "Chandrayaan-3-এর ল্যান্ডারের নাম কী?", answer: "বিক্রম।" },
+  { id: 151, question: "Chandrayaan-3-এর রোভারের নাম কী?", answer: "প্রজ্ঞান।" },
+  { id: 152, question: "Chandrayaan-3 কোথা থেকে উৎক্ষেপিত হয়?", answer: "সতীশ ধাওয়ান মহাকাশ কেন্দ্র, শ্রীহরিকোটা।" },
+  { id: 153, question: "PM-এর প্রথম কার্যকর PM MITRA পার্ক কত একর জমিতে বিস্তৃত?", answer: "1327 একর।" },
+  { id: 154, question: "ভারতের প্রথম SpaceTech ইউনিকর্ন কোন প্রতিষ্ঠান?", answer: "স্কাইরুট অ্যারোস্পেস।" },
+  { id: 155, question: "International Big Cat Alliance-এর পূর্ণরূপ কী?", answer: "International Big Cat Alliance." },
+  { id: 156, question: "International Big Cat Alliance কবে চালু হয়?", answer: "9 এপ্রিল 2023." },
+  { id: 157, question: "International Big Cat Alliance কতটি বড় বিড়াল প্রজাতির সংরক্ষণে কাজ করে?", answer: "7টি।" },
+  { id: 158, question: "IBCA-র অন্তর্ভুক্ত বড় বিড়াল প্রজাতিগুলি কী?", answer: "বাঘ, সিংহ, চিতা, তুষার চিতা, জাগুয়ার, পুমা ও চিতাবাঘ।" },
+  { id: 159, question: "প্রথম International Big Cat Alliance Summit কোন দেশ আয়োজন করবে?", answer: "ভারত।" },
+  { id: 160, question: "International Big Cat Alliance-এর সদর দপ্তর কোথায়?", answer: "ভারত।" },
+  { id: 161, question: "2026-এ বতসোয়ানা থেকে ভারতে কতটি চিতা আনা হয়?", answer: "9টি।" },
+  { id: 162, question: "বতসোয়ানা থেকে আনা 9টি চিতার মধ্যে কতটি স্ত্রী?", answer: "6টি।" },
+  { id: 163, question: "বতসোয়ানা থেকে আনা 9টি চিতার মধ্যে কতটি পুরুষ?", answer: "3টি।" },
+  { id: 164, question: "প্রথম উপগ্রহ-ট্যাগযুক্ত গঙ্গা সফটশেল কচ্ছপ কোথায় ছাড়া হয়?", answer: "কাজিরাঙা জাতীয় উদ্যান ও ব্যাঘ্র সংরক্ষণক্ষেত্রে।" },
+  { id: 165, question: "গঙ্গা সফটশেল কচ্ছপের বৈজ্ঞানিক নাম কী?", answer: "Nilssonia gangetica." },
+  { id: 166, question: "গঙ্গা সফটশেল কচ্ছপের IUCN সংরক্ষণ-স্থিতি কী?", answer: "বিপন্ন।" },
+  { id: 167, question: "ভারতের প্রথম বহুজাতিক সামরিক মহড়া PRAGATI কোথায় অনুষ্ঠিত হয়?", answer: "উমরোই, মেঘালয়।" },
+  { id: 168, question: "PRAGATI-এর পূর্ণরূপ কী?", answer: "Partnership of Regional Armies for Growth and Transformation in the Indian Ocean Region." },
+  { id: 169, question: "PRAGATI 2026-এ কতটি বিদেশি দেশের সেনা অংশ নেয়?", answer: "12টি বিদেশি দেশ।" },
+  { id: 170, question: "PRAGATI 2026-এর সঙ্গে ভারতসহ মোট কতটি দেশ অংশ নেয়?", answer: "13টি দেশ।" },
+  { id: 171, question: "ভারত ও ফ্রান্সের নৌমহড়ার নাম কী?", answer: "বরুণ।" },
+  { id: 172, question: "বরুণ মহড়া কোন দুই দেশের মধ্যে অনুষ্ঠিত হয়?", answer: "ভারত ও ফ্রান্স।" },
+  { id: 173, question: "PM SHRI-এর পূর্ণরূপে “SHRI” কী নির্দেশ করে?", answer: "Schools for Rising India." },
+  { id: 174, question: "RBI কবে প্রতিষ্ঠিত হয়?", answer: "1 এপ্রিল 1935." },
+  { id: 175, question: "RBI কবে জাতীয়করণ করা হয়?", answer: "1 জানুয়ারি 1949." },
+  { id: 176, question: "RBI-এর সদর দপ্তর কোথায়?", answer: "মুম্বই।" },
+  { id: 177, question: "2026-এ RBI-এর গভর্নর কে?", answer: "সঞ্জয় মালহোত্রা।" },
+  { id: 178, question: "FAO-এর পূর্ণরূপ কী?", answer: "Food and Agriculture Organization." },
+  { id: 179, question: "FAO কবে প্রতিষ্ঠিত হয়?", answer: "16 অক্টোবর 1945." },
+  { id: 180, question: "FAO-এর সদর দপ্তর কোথায়?", answer: "রোম, ইতালি।" },
+  { id: 181, question: "প্রধানমন্ত্রী নরেন্দ্র মোদীকে 2026-এর Agricola Medal কোন সংস্থা দেয়?", answer: "FAO." },
+  { id: 182, question: "প্রধানমন্ত্রী নরেন্দ্র মোদীকে Grand Cross of the Royal Norwegian Order of Merit কোন দেশ দেয়?", answer: "নরওয়ে।" },
+  { id: 183, question: "প্রধানমন্ত্রী নরেন্দ্র মোদীকে Royal Order of the Polar Star কোন দেশ দেয়?", answer: "সুইডেন।" },
+  { id: 184, question: "Royal Order of the Polar Star-এর কোন শ্রেণি নরেন্দ্র মোদী পান?", answer: "Degree Commander Grand Cross." },
+  { id: 185, question: "Mission S.M.A.R.T.-এর সঙ্গে কোন মন্ত্রক যুক্ত?", answer: "গ্রামীণ উন্নয়ন মন্ত্রক।" },
+  { id: 186, question: "Haryana-এর বিনামূল্যের ডিজিটাল কর্মসংস্থান অ্যাপের নাম কী?", answer: "শ্রম মিত্র।" },
+  { id: 187, question: "গিগ কর্মীদের জন্য ভারতের প্রথম ডিজিটাল অভিযোগ নিষ্পত্তি ব্যবস্থা কোন রাজ্য চালু করে?", answer: "কর্ণাটক।" },
+  { id: 188, question: "ছত্তিশগড়ের শ্রমিকদের জন্য নতুন মোবাইল অ্যাপের নাম কী?", answer: "ই-শ্রম সাথী।" },
+  { id: 189, question: "মিজোরামের দুর্যোগ ব্যবস্থাপনা অ্যাপের নাম কী?", answer: "খুল।" },
+  { id: 190, question: "ভারতের প্রথম কাগজবিহীন পূর্ণাঙ্গ রাজ্য বিচারব্যবস্থা কোন রাজ্যের?", answer: "সিকিম।" },
+  { id: 191, question: "ভারতের প্রথম মাল্টিলেন ফ্রি-ফ্লো ব্যারিয়ারলেস টোল ব্যবস্থা কোন রাজ্যে চালু হয়?", answer: "গুজরাট।" },
+  { id: 192, question: "এই ফ্রি-ফ্লো টোল ব্যবস্থা কোন প্রযুক্তি ব্যবহার করে?", answer: "ফাস্ট্যাগ ও নম্বর-প্লেট শনাক্তকারী ক্যামেরা।" },
+  { id: 193, question: "2026-এ SEHAT মিশন কোথায় চালু হয়?", answer: "নয়াদিল্লি।" },
+  { id: 194, question: "SEHAT মিশনের মূল ক্ষেত্র কী?", answer: "কৃষি, পুষ্টি ও জনস্বাস্থ্যের সমন্বয়।" },
+  { id: 195, question: "2026-এ Mission for Cotton Productivity অনুমোদনকারী সংস্থা কোনটি?", answer: "কেন্দ্রীয় মন্ত্রিসভা।" },
+  { id: 196, question: "South Coastal Railway-এর কার্যকর হওয়ার নির্ধারিত তারিখ কী?", answer: "1 জুন 2026." },
+  { id: 197, question: "ADB-এর 2026 সালের বার্ষিক সভার আয়োজক দেশ কোনটি?", answer: "উজবেকিস্তান।" },
+  { id: 198, question: "ভারতের প্রথম AI-চালিত ফিজিটাল ব্যাংক শাখার অবস্থান কী?", answer: "GS Road, গুয়াহাটি." },
+  { id: 199, question: "বিশ্ব মেট্রোলজি দিবসের ঐতিহাসিক ভিত্তি কোন চুক্তি?", answer: "Metre Convention, 1875." },
+  { id: 200, question: "2026-এর বিশ্ব মেট্রোলজি দিবসের মূল উদ্দেশ্য কী?", answer: "নীতিনির্ধারণে পরিমাপের নির্ভরযোগ্যতার মাধ্যমে আস্থা গড়ে তোলা।" }
+  ];
+  
+  function question() {
+    const questionContainer = document.getElementById('question');
+    
+    questionData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'qa-card';
+        
+        card.innerHTML = `
+        <div class="question"><span class="q-no">${index + 1}.</span> ${item.question}</div>
+        <div class="answer" id="answer-${index}">
+        <strong class="a-no">উত্তর:</strong> ${item.answer}
+        </div>
+        `;
+      
+      questionContainer.appendChild(card);
+    });
+  }
+  
+  question();
+  
+  function goToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+  </script>
+</body>
+</html>
