@@ -6,7 +6,6 @@
   <title>Current Affairs</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -52,6 +51,66 @@
     <button class="go-to-top" onclick="goToTop()">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-    
   </footer>
+  <script>
+    //1.  Scroll to top
+
+function goToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+
+//2.  search from content table
+function contentSearch() {
+    var input = document.getElementById("contentInput");
+    var filter = input.value.toUpperCase();
+    var tables = document.querySelectorAll(".searchable-table");
+    
+    for (var k = 0; k < tables.length; k++) {
+        var tr = tables[k].getElementsByTagName("tr");
+        var visibleRowCount = 0;
+        
+        for (var i = 1; i < tr.length; i++) {
+            var td = tr[i].getElementsByTagName("td");
+            var matchFound = false;
+            
+            for (var j = 0; j < td.length; j++) {
+                if (td[j]) {
+                    var txtValue = td[j].textContent || td[j].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+            }
+            
+            if (matchFound) {
+                tr[i].style.display = "";
+                visibleRowCount++;
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+        
+        var tableWrapper = tables[k].closest(".table-wrapper");
+        
+        if (visibleRowCount > 0) {
+            if (tableWrapper) {
+                tableWrapper.style.display = "";
+            } else {
+                tables[k].style.display = "";
+            }
+        } else {
+            if (tableWrapper) {
+                tableWrapper.style.display = "none";
+            } else {
+                tables[k].style.display = "none";
+            }
+        }
+    }
+};
+  </script>
+</body>
 </html>
