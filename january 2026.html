@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan 2026</title>
+  <link rel="stylesheet" href="page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="main-header">
+        <a class="logo" href="index.html">
+          <img class="logo-img" src="https://lh3.googleusercontent.com/d/1RAAdWJH-ZAp9-19ZvBLSdG3I83iKA0xB" alt="Logo" width="45px">
+          <h1 class="logo-text">proff. MINI</h1>
+        </a>
+      <div class="social-icon">
+        <a class="instagram" href="https://www.instagram.com/edurocket0"><i class="fa-brands fa-instagram" style="color: #ff38c3ff;"></i></a>
+        <a class="telegram" href="https://t.me/edurocket0"><i class="fa-brands fa-telegram" style="color: #41ABFF;"></i></a>
+      </div>
+    </div>
+    <div class="title">
+      <h3>January 2026</h3>
+    </div>
+  </header>
+  <div class="questions">
+    <div id="question"></div>
+  </div>
+  <footer>
+    <button class="go-to-top" onclick="goToTop()">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
+  <script>
+  const questionData = [
+{ id: 1, question: "2026 সালের প্রজাতন্ত্র দিবসের প্যারেডে রাজ্য ও কেন্দ্রশাসিত অঞ্চলের সেরা ঝাঁকির পুরস্কার কোন রাজ্য পেয়েছে?", answer: "মহারাষ্ট্র।" },
+{ id: 2, question: "মহারাষ্ট্রের 2026 সালের প্রজাতন্ত্র দিবসের ঝাঁকির বিষয় কী ছিল?", answer: "গণেশোৎসব—আত্মনির্ভরতার প্রতীক।" },
+{ id: 3, question: "2026 সালের প্রজাতন্ত্র দিবসের প্যারেডে তিন বাহিনীর সেরা মার্চিং কন্টিনজেন্ট কোনটি হয়?", answer: "ভারতীয় নৌবাহিনী।" },
+{ id: 4, question: "2026 সালের প্রজাতন্ত্র দিবসের প্যারেডে CAPF ও অন্যান্য সহায়ক বাহিনীর সেরা মার্চিং কন্টিনজেন্ট কোনটি হয়?", answer: "দিল্লি পুলিশ।" },
+{ id: 5, question: "2026 সালের প্রজাতন্ত্র দিবসের প্যারেডে কেন্দ্রীয় মন্ত্রক ও বিভাগের সেরা ঝাঁকি কোন মন্ত্রক পায়?", answer: "সংস্কৃতি মন্ত্রক।" },
+{ id: 6, question: "2026 সালের প্রজাতন্ত্র দিবসের প্যারেডে সংস্কৃতি মন্ত্রকের ঝাঁকির বিষয় কী ছিল?", answer: "‘বন্দে মাতরম—দ্য সোল ক্রাই অব আ নেশন’।" },
+{ id: 7, question: "2026 সালে ভারত কততম প্রজাতন্ত্র দিবস পালন করে?", answer: " 77তম।" },
+{ id: 8, question: "2026 সালের প্রজাতন্ত্র দিবসের প্রধান অতিথিদের মধ্যে ইউরোপীয় কাউন্সিলের সভাপতি কে ছিলেন?", answer: "আন্তোনিও কোস্তা।" },
+{ id: 9, question: "2026 সালের প্রজাতন্ত্র দিবসের প্রধান অতিথিদের মধ্যে ইউরোপীয় কমিশনের সভাপতি কে ছিলেন?", answer: "উরসুলা ফন ডার লেয়েন।" },
+{ id: 10, question: "2026 সালের প্রজাতন্ত্র দিবসের মূল থিম কী ছিল?", answer: "বন্দে মাতরমের 150 বছর।" },
+{ id: 11, question: "2026 সালে মধ্যপ্রদেশ কোন বছর হিসেবে 2026 সালকে ঘোষণা করে?", answer: "কৃষিবর্ষ।" },
+{ id: 12, question: "মধ্যপ্রদেশের কৃষিবর্ষ 2026-এর থিম কী?", answer: "সমৃদ্ধ কৃষক, সমৃদ্ধ রাজ্য।" },
+{ id: 13, question: "জানুয়ারি 2026-এ উগান্ডার রাষ্ট্রপতি হিসেবে টানা সপ্তমবার কে নির্বাচিত হন?", answer: "ইয়োওয়েরি মুসেভেনি।" },
+{ id: 14, question: "2026 সালের বিশ্ব অর্থনৈতিক ফোরামের 56তম বার্ষিক সভা কোথায় অনুষ্ঠিত হয়?", answer: "দাভোস, সুইজারল্যান্ড।" },
+{ id: 15, question: "2026 সালের বিশ্ব অর্থনৈতিক ফোরামের বার্ষিক সভার থিম কী ছিল?", answer: "‘A Spirit of Dialogue’ বা ‘সংলাপের চেতনা’।" },
+{ id: 16, question: "2026 সালের WEF-এর 56তম বার্ষিক সভা কবে অনুষ্ঠিত হয়?", answer: "19–23 জানুয়ারি 2026।" },
+{ id: 17, question: "2026 সালে ভারত, শ্রীলঙ্কা ও মালদ্বীপের ত্রিপক্ষীয় নৌ-অভ্যাসের নাম কী?", answer: "দোস্তি।" },
+{ id: 18, question: "দোস্তি নৌ-অভ্যাসে কোন তিনটি দেশ অংশগ্রহণ করে?", answer: "ভারত, শ্রীলঙ্কা ও মালদ্বীপ।" },
+{ id: 19, question: "রাষ্ট্রপতি পুলিশ কালার পুরস্কার পাওয়া ভারতের 15তম রাজ্য হিসেবে কোন রাজ্যের নাম ফাইলে উল্লেখ আছে?", answer: "সিকিম।" },
+{ id: 20, question: "2025 সালের ইন্দিরা গান্ধী শান্তি পুরস্কারের জন্য কাকে নির্বাচিত করা হয়?", answer: "গ্রাসা মাশেল।" },
+{ id: 21, question: "গ্রাসা মাশেল কোন দেশের মানবাধিকারকর্মী?", answer: "মোজাম্বিকের।" },
+{ id: 22, question: "2026 সালের Numbeo Safety Index-এ বিশ্বের শীর্ষ নিরাপদ শহর হিসেবে কোন শহরের নাম দেওয়া হয়েছে?", answer: "চীনের কিংদাও।" },
+{ id: 23, question: "2026 সালের Numbeo Safety Index-এ ভারতের শীর্ষস্থানীয় নিরাপদ শহর হিসেবে কোন শহরের নাম দেওয়া হয়েছে?", answer: "বেঙ্গালুরু।" },
+{ id: 24, question: "2026 সালের Numbeo Safety Index-এ আবুধাবির অবস্থান কত নম্বরে বলা হয়েছে?", answer: "দ্বিতীয়।" },
+{ id: 25, question: "2026 সালের Numbeo Safety Index-এ দোহার অবস্থান কত নম্বরে বলা হয়েছে?", answer: "তৃতীয়।" },
+{ id: 26, question: "গবেষকদের মাসিক আর্থিক সহায়তার জন্য কোন রাজ্য ‘অটল বিচল অগ্রগামী’ প্রকল্প চালু করেছে বলে ফাইলে উল্লেখ আছে?", answer: "অসম।" },
+{ id: 27, question: "2026 সালের প্রজাতন্ত্র দিবসে 140 জন পুরুষ সদস্যের CRPF মার্চিং দলকে নেতৃত্বদানকারী প্রথম মহিলা কর্মকর্তা হিসেবে কার নাম দেওয়া হয়েছে?", answer: "সিমরন বালা।" },
+{ id: 28, question: "অটল পেনশন যোজনা কবে চালু হয়?", answer: "9 মে 2015।" },
+{ id: 29, question: "অটল পেনশন যোজনায় সর্বনিম্ন নিশ্চিত মাসিক পেনশন কত?", answer: "1,000 টাকা।" },
+{ id: 30, question: "অটল পেনশন যোজনায় সর্বোচ্চ নিশ্চিত মাসিক পেনশন কত?", answer: "5,000 টাকা।" },
+{ id: 31, question: "অটল পেনশন যোজনায় যোগদানের সর্বনিম্ন বয়স কত?", answer: "18 বছর।" },
+{ id: 32, question: "অটল পেনশন যোজনায় যোগদানের সর্বোচ্চ বয়স কত?", answer: "40 বছর।" },
+{ id: 33, question: "ভারতের প্রথম হাইড্রোজেন চালিত ট্রেন কোন রাজ্যে চালু করার পরিকল্পনা করা হয়েছে?", answer: "হরিয়ানা।" },
+{ id: 34, question: "ভারতের প্রথম হাইড্রোজেন ট্রেনের জন্য কোন রুটের নাম ফাইলে দেওয়া হয়েছে?", answer: "জিন্দ–সোনিপত রুট।" },
+{ id: 35, question: "2026 সালকে চরাগাহ ও পশুপালকদের আন্তর্জাতিক বছর ঘোষণার প্রস্তাব কোন দেশ দিয়েছিল?", answer: "মঙ্গোলিয়া।" },
+{ id: 36, question: "2026 সালে মোট কতটি পদ্ম পুরস্কার অনুমোদিত হয়?", answer: "131টি।" },
+{ id: 37, question: "2026 সালে কতটি পদ্মবিভূষণ পুরস্কার দেওয়া হয়?", answer: "5টি।" },
+{ id: 38, question: "2026 সালে কতটি পদ্মভূষণ পুরস্কার দেওয়া হয়?", answer: "13টি।" },
+{ id: 39, question: "2026 সালে কতটি পদ্মশ্রী পুরস্কার দেওয়া হয়?", answer: "113টি।" },
+{ id: 40, question: "2026 সালের পদ্ম পুরস্কারের মধ্যে কতজন মহিলা ছিলেন?", answer: "19 জন।" },
+{ id: 41, question: "2026 সালের পদ্ম পুরস্কারে কতটি মরণোত্তর সম্মান ছিল?", answer: "16টি।" },
+{ id: 42, question: "2026 সালে মরণোত্তর পদ্মবিভূষণ পাওয়া অভিনেতার নাম কী?", answer: "ধর্মেন্দ্র সিং দেওল।" },
+{ id: 43, question: "2026 সালের পদ্মবিভূষণপ্রাপ্ত K. T. Thomas কোন ক্ষেত্রে সম্মানিত হন?", answer: "জনসেবা।" },
+{ id: 44, question: "2026 সালের পদ্মবিভূষণপ্রাপ্ত N. Rajam কোন ক্ষেত্রে সম্মানিত হন?", answer: "শিল্প।" },
+{ id: 45, question: "2026 সালের পদ্মবিভূষণপ্রাপ্ত V. S. Achuthanandan কোন ক্ষেত্রে সম্মানিত হন?", answer: "জনসেবা।" },
+{ id: 46, question: "2026 সালের পদ্মবিভূষণপ্রাপ্ত P. Narayanan কোন ক্ষেত্রে সম্মানিত হন?", answer: "সাহিত্য ও শিক্ষা।" },
+{ id: 47, question: "2026 সালের পদ্মভূষণপ্রাপ্ত আলকা ইয়াগনিক কোন ক্ষেত্রে সম্মানিত হন?", answer: "শিল্প।" },
+{ id: 48, question: "2026 সালের পদ্মভূষণপ্রাপ্ত মাম্মুট্টি কোন ক্ষেত্রে সম্মানিত হন?", answer: "শিল্প।" },
+{ id: 49, question: "2026 সালের পদ্মভূষণপ্রাপ্ত উদয় কোটাক কোন ক্ষেত্রে সম্মানিত হন?", answer: "বাণিজ্য ও শিল্প।" },
+{ id: 50, question: "2026 সালের পদ্মভূষণপ্রাপ্ত বিজয় অমৃতরাজ কোন ক্ষেত্রে সম্মানিত হন?", answer: "ক্রীড়া।" },
+{ id: 51, question: "জাতীয় ভোটার দিবস 2026 কবে পালিত হয়?", answer: "25 জানুয়ারি।" },
+{ id: 52, question: "2026 সালে কোনতম জাতীয় ভোটার দিবস পালিত হয়?", answer: "16তম।" },
+{ id: 53, question: "জাতীয় ভোটার দিবস 2026-এর থিম কী?", answer: "‘My India, My Vote’ বা ‘আমার ভারত, আমার ভোট’।" },
+{ id: 54, question: "জাতীয় ভোটার দিবস 2026-এর ট্যাগলাইন কী?", answer: "‘Citizen at the Heart of Indian Democracy’ বা ‘ভারতীয় গণতন্ত্রের কেন্দ্রে নাগরিক’।" },
+{ id: 55, question: "49তম আন্তর্জাতিক কলকাতা বইমেলা 2026-এর ফোকাল থিম দেশ কোনটি?", answer: "আর্জেন্টিনা।" },
+{ id: 56, question: "49তম আন্তর্জাতিক কলকাতা বইমেলা 2026 কোথায় অনুষ্ঠিত হয়?", answer: "সল্ট লেকের বইমেলা প্রাঙ্গণে, কলকাতায়।" },
+{ id: 57, question: "49তম আন্তর্জাতিক কলকাতা বইমেলা 2026 কবে শুরু হয়?", answer: "22 জানুয়ারি 2026।" },
+{ id: 58, question: "2026 সালের AERB-এর নতুন চেয়ারপার্সন কে হন?", answer: "এ. কে. বালাসুব্রহ্মণিয়ান।" },
+{ id: 59, question: "AERB-এর নতুন চেয়ারপার্সন এ. কে. বালাসুব্রহ্মণিয়ান কবে দায়িত্ব নেন?", answer: "1 জানুয়ারি 2026।" },
+{ id: 60, question: "83তম Golden Globe Awards 2026-এ সেরা অভিনেত্রী—ড্রামা পুরস্কার কে পান?", answer: "জেসি বাকলি।" },
+{ id: 61, question: "Golden Globes 2026-এ সেরা চলচ্চিত্র—ড্রামা পুরস্কার কোন চলচ্চিত্র পায়?", answer: "‘Hamnet’।" },
+{ id: 62, question: "Golden Globes 2026-এ সেরা চলচ্চিত্র—মিউজিক্যাল বা কমেডি পুরস্কার কোন চলচ্চিত্র পায়?", answer: "‘One Battle After Another’।" },
+{ id: 63, question: "Golden Globes 2026-এ সেরা অভিনেতা—ড্রামা পুরস্কার কে পান?", answer: "ওয়াগনার মউরা।" },
+{ id: 64, question: "Golden Globes 2026-এ সেরা পরিচালক পুরস্কার কে পান?", answer: "পল থমাস অ্যান্ডারসন।" },
+{ id: 65, question: "Golden Globes 2026-এ ‘Hamnet’-এর জন্য সেরা অভিনেত্রী—ড্রামা পুরস্কার কে পান?", answer: "জেসি বাকলি।" },
+{ id: 66, question: "2026 সালের India AI Impact Summit কোথায় অনুষ্ঠিত হয়?", answer: "ভারত মণ্ডপম, নয়াদিল্লি।" },
+{ id: 67, question: "India AI Impact Summit 2026 কবে অনুষ্ঠিত হয়?", answer: "16–20 ফেব্রুয়ারি 2026।" },
+{ id: 68, question: "Global South-এ প্রথম বৃহৎ বৈশ্বিক AI Summit হিসেবে কোন সম্মেলনটি অনুষ্ঠিত হয়?", answer: "India AI Impact Summit 2026।" },
+{ id: 69, question: "India AI Impact Summit 2026-এর তিনটি মূল স্তম্ভ কী?", answer: "People, Planet ও Progress।" },
+{ id: 70, question: "India AI Impact Summit 2026-এর Expo কোথায় অনুষ্ঠিত হয়?", answer: "ভারত মণ্ডপম, নয়াদিল্লি।" },
+{ id: 71, question: "India AI Impact Summit 2026-এর Expo কবে শুরু হয়?", answer: "16 ফেব্রুয়ারি 2026।" },
+{ id: 72, question: "2026 সালের দ্বিতীয় Global Buddhist Summit কোথায় অনুষ্ঠিত হয়?", answer: "ভারত মণ্ডপম, নয়াদিল্লি।" },
+{ id: 73, question: "দ্বিতীয় Global Buddhist Summit 2026 কবে অনুষ্ঠিত হয়?", answer: "24–25 জানুয়ারি 2026।" },
+{ id: 74, question: "দ্বিতীয় Global Buddhist Summit 2026-এর থিম কী?", answer: "‘Collective Wisdom, United Voice, and Mutual Coexistence’।" },
+{ id: 75, question: "দ্বিতীয় Global Buddhist Summit 2026 কোন সংস্থা আয়োজন করে?", answer: "International Buddhist Confederation।" },
+{ id: 76, question: "2026 সালের Khelo India Winter Games কততম সংস্করণ?", answer: "ষষ্ঠ।" },
+{ id: 77, question: "Khelo India Winter Games 2026-এর প্রথম পর্ব কোথায় অনুষ্ঠিত হয়?", answer: "লেহ, লাদাখে।" },
+{ id: 78, question: "Khelo India Winter Games 2026-এর প্রথম পর্বে পদক তালিকায় শীর্ষে কোন দল/রাজ্য ছিল?", answer: "হরিয়ানা।" },
+{ id: 79, question: "Khelo India Winter Games 2026-এর প্রথম পর্বে দ্বিতীয় স্থানে কে ছিল?", answer: "লাদাখ।" },
+{ id: 80, question: "Khelo India Winter Games 2026-এর প্রথম পর্বে তৃতীয় স্থানে কে ছিল?", answer: "মহারাষ্ট্র।" },
+{ id: 81, question: "Khelo India Winter Games 2026-এর প্রথম পর্ব কবে অনুষ্ঠিত হয়?", answer: "20–26 জানুয়ারি 2026।" },
+{ id: 82, question: "Khelo India Winter Games 2026-এ প্রথমবার কোন নতুন ক্রীড়া অন্তর্ভুক্ত হয়?", answer: "ফিগার স্কেটিং।" },
+{ id: 83, question: "Khelo India Winter Games 2026-এর শীতকালীন তুষার ক্রীড়ার পর্ব কোথায় অনুষ্ঠিত হয়?", answer: "গুলমার্গ, জম্মু ও কাশ্মীরে।" },
+{ id: 84, question: "Khelo India Winter Games 2026-এর প্রথম পর্বে কতজন ক্রীড়াবিদ অংশ নেন?", answer: "480 জন।" },
+{ id: 85, question: "Khelo India Winter Games 2026-এ ফিগার স্কেটিং কোন ধরনের ক্রীড়া?", answer: "বরফের ক্রীড়া।" },
+{ id: 86, question: "Kerala-এর সরকারি State Microbe কোনটি?", answer: "Bacillus subtilis।" },
+{ id: 87, question: "Bacillus subtilis-কে State Microbe ঘোষণা করে ভারতের প্রথম রাজ্য কোনটি?", answer: "কেরালা।" },
+{ id: 88, question: "কেরালার State Microbe নির্বাচনের সরকারি আদেশে কোন ব্যাকটেরিয়ার নাম রয়েছে?", answer: "Bacillus subtilis।" },
+{ id: 89, question: "PANKHUDI পোর্টাল কোন মন্ত্রক চালু করে?", answer: "নারী ও শিশু উন্নয়ন মন্ত্রক।" },
+{ id: 90, question: "PANKHUDI পোর্টাল কে উদ্বোধন করেন?", answer: "কেন্দ্রীয় মন্ত্রী অন্নপূর্ণা দেবী।" },
+{ id: 91, question: "PANKHUDI পোর্টাল কবে চালু হয়?", answer: "8 জানুয়ারি 2026।" },
+{ id: 92, question: "PANKHUDI পোর্টালের প্রধান উদ্দেশ্য কী?", answer: "নারী ও শিশু উন্নয়নে CSR ও অংশীদারিত্বকে একটি ডিজিটাল প্ল্যাটফর্মে সমন্বয় করা।" },
+{ id: 93, question: "ভারতের প্রথম সম্পূর্ণ কাগজবিহীন জেলা বিচারব্যবস্থা কোথায় চালু হয়?", answer: "কালপেট্টা, ওয়ায়ানাড, কেরালা।" },
+{ id: 94, question: "কালপেট্টার কাগজবিহীন জেলা বিচারব্যবস্থা কে ভার্চুয়ালি উদ্বোধন করেন?", answer: "ভারতের প্রধান বিচারপতি সূর্য কান্ত।" },
+{ id: 95, question: "কালপেট্টার কাগজবিহীন বিচারব্যবস্থায় মামলার প্রক্রিয়া কীভাবে পরিচালিত হয়?", answer: "সম্পূর্ণ ডিজিটালভাবে।" },
+{ id: 96, question: "তামিলনাড়ুর DeepTech Startup Policy 2025–26 কবে প্রকাশিত হয়?", answer: "8 জানুয়ারি 2026।" },
+{ id: 97, question: "ভারতের প্রথম রাজ্য-স্তরের DeepTech Startup Policy কোন রাজ্য চালু করে?", answer: "তামিলনাড়ু।" },
+{ id: 98, question: "তামিলনাড়ুর DeepTech Startup Policy-এর লক্ষ্য কতটি DeepTech startup-কে সহায়তা করা?", answer: "100টি।" },
+{ id: 99, question: "তামিলনাড়ুর DeepTech Startup Policy-তে কত টাকার বিনিয়োগ সংগ্রহের লক্ষ্য রয়েছে?", answer: "100 কোটি টাকা।" },
+{ id: 100, question: "New Delhi World Book Fair 2026-এর মূল থিম কী?", answer: "‘Indian Military History: Valour and Wisdom @ 75’।" },
+{ id: 101, question: "New Delhi World Book Fair 2026 কোথায় অনুষ্ঠিত হয়?", answer: "ভারত মণ্ডপম, নয়াদিল্লি।" },
+{ id: 102, question: "New Delhi World Book Fair 2026 কবে অনুষ্ঠিত হয়?", answer: "10–18 জানুয়ারি 2026।" },
+{ id: 103, question: "New Delhi World Book Fair 2026-এর আয়োজক প্রতিষ্ঠান কোনটি?", answer: "National Book Trust, India।" },
+{ id: 104, question: "New Delhi World Book Fair 2026-এর সহ-আয়োজক কোন সংস্থা?", answer: "India Trade Promotion Organisation।" },
+{ id: 105, question: "New Delhi World Book Fair 2026-এ কোন দুই দেশের সংস্কৃতি মন্ত্রী বিশেষ অতিথি হিসেবে উপস্থিত ছিলেন?", answer: "কাতার ও স্পেনের সংস্কৃতি মন্ত্রী।" },
+{ id: 106, question: "2026 সালের New Delhi World Book Fair-এ ‘The Saga of Kudopali’ বইটি কে প্রকাশ করেন?", answer: "কেন্দ্রীয় শিক্ষামন্ত্রী ধর্মেন্দ্র প্রধান।" },
+{ id: 107, question: "‘The Saga of Kudopali’ বইটি কোন ঐতিহাসিক ঘটনার সঙ্গে সম্পর্কিত?", answer: "1857 সালের স্বাধীনতা সংগ্রাম।" },
+{ id: 108, question: "2026 সালের New Delhi World Book Fair-এ প্রথমবার প্রবেশমূল্য কেমন রাখা হয়?", answer: "সম্পূর্ণ বিনামূল্যে।" },
+{ id: 109, question: "2026 সালের Global Risks Report কে প্রকাশ করে?", answer: "World Economic Forum।" },
+{ id: 110, question: "Global Risks Report 2026 অনুযায়ী 2026 সালের প্রধান বৈশ্বিক ঝুঁকি কী?", answer: "ভূ-অর্থনৈতিক সংঘাত।" },
+{ id: 111, question: "2026 সালের Responsible Nations Index-এ ভারতের অবস্থান কত?", answer: "16তম।" },
+{ id: 112, question: "Responsible Nations Index 2026 কতটি দেশকে নিয়ে তৈরি?", answer: "154টি দেশ।" },
+{ id: 113, question: "Responsible Nations Index 2026-এ ভারতের স্কোর কত?", answer: "0.5515।" },
+{ id: 114, question: "Responsible Nations Index 2026-এর শীর্ষ দেশ কোনটি বলে ফাইলে উল্লেখ আছে?", answer: "সিঙ্গাপুর।" },
+{ id: 115, question: "Responsible Nations Index 2026-এ দ্বিতীয় স্থানে কোন দেশ বলে ফাইলে উল্লেখ আছে?", answer: "সুইজারল্যান্ড।" },
+{ id: 116, question: "Responsible Nations Index 2026-এ তৃতীয় স্থানে কোন দেশ বলে ফাইলে উল্লেখ আছে?", answer: "ডেনমার্ক।" },
+{ id: 117, question: "Responsible Nations Index 2026 কোন সংস্থা প্রকাশ করেছে বলে ফাইলে উল্লেখ আছে?", answer: "World Intellectual Foundation।" },
+{ id: 118, question: "Asia Manufacturing Index 2026-এ ভারতের অবস্থান কত?", answer: "ষষ্ঠ।" },
+{ id: 119, question: "Asia Manufacturing Index 2026 কে প্রকাশ করেছে?", answer: "Dezan Shira & Associates।" },
+{ id: 120, question: "Asia Manufacturing Index 2026-এ শীর্ষ দেশ কোনটি?", answer: "চীন।" },
+{ id: 121, question: "Asia Manufacturing Index 2026-এ দ্বিতীয় স্থানে কোন দেশ?", answer: "মালয়েশিয়া।" },
+{ id: 122, question: "Asia Manufacturing Index 2026-এ তৃতীয় স্থানে কোন দেশ?", answer: "ভিয়েতনাম।" },
+{ id: 123, question: "2026 সালের International Education Day কবে পালিত হয়?", answer: "24 জানুয়ারি।" },
+{ id: 124, question: "International Education Day 2026-এর থিম কী?", answer: "‘The Power of Youth in Co-Creating Education’।" },
+{ id: 125, question: "2026 সালের National Youth Day কবে পালিত হয়?", answer: "12 জানুয়ারি।" },
+{ id: 126, question: "National Youth Day কার জন্মজয়ন্তীতে পালিত হয়?", answer: "স্বামী বিবেকানন্দের জন্মজয়ন্তীতে।" },
+{ id: 127, question: "2026 সালের World Braille Day কবে পালিত হয়?", answer: "4 জানুয়ারি।" },
+{ id: 128, question: "World Braille Day কার জন্মদিনে পালিত হয়?", answer: "লুই ব্রেইলের জন্মদিনে।" },
+{ id: 129, question: "National Startup Day কবে পালিত হয়?", answer: "16 জানুয়ারি।" },
+{ id: 130, question: "National Startup Day-এর সঙ্গে কোন উদ্যোগের সূচনার সম্পর্ক রয়েছে?", answer: "Startup India Initiative।" },
+{ id: 131, question: "ভারতীয় সেনা দিবস 2026 কবে পালিত হয়?", answer: "15 জানুয়ারি।" },
+{ id: 132, question: "ভারতীয় সেনা দিবস কেন 15 জানুয়ারি পালিত হয়?", answer: "15 জানুয়ারি 1949-এ কে. এম. কারিয়াপ্পা প্রথম ভারতীয় সেনাপ্রধান হন।" },
+{ id: 133, question: "ভারতীয় বায়ুসেনা দিবস কবে পালিত হয়?", answer: "8 অক্টোবর।" },
+{ id: 134, question: "ভারতীয় নৌসেনা দিবস কবে পালিত হয়?", answer: "4 ডিসেম্বর।" },
+{ id: 135, question: "2026 সালে ভারতীয় সেনাবাহিনী কোন বিষয়কে বছরের লক্ষ্য হিসেবে ঘোষণা করে?", answer: "Networking ও Data Centricity।" },
+{ id: 136, question: "Networking ও Data Centricity Year-এর উদ্দেশ্য কী?", answer: "সংযোগ, রিয়েল-টাইম সিদ্ধান্ত গ্রহণ ও যুদ্ধক্ষমতা বাড়ানো।" },
+{ id: 137, question: "2026 সালের Khelo India Beach Games কোথায় অনুষ্ঠিত হয়?", answer: "ঘোঘলা বিচ, দিউ।" },
+{ id: 138, question: "Khelo India Beach Games 2026 কততম সংস্করণ?", answer: "দ্বিতীয়।" },
+{ id: 139, question: "Khelo India Beach Games 2026-এর মাসকটের নাম কী?", answer: "Pearl।" },
+{ id: 140, question: "Khelo India Beach Games 2026-এর মাসকট Pearl কোন প্রাণী?", answer: "ডলফিন।" },
+{ id: 141, question: "Khelo India Beach Games 2026-এর পদক তালিকায় শীর্ষে কোন রাজ্য ছিল?", answer: "কর্ণাটক।" },
+{ id: 142, question: "Khelo India Beach Games 2026-এ কর্ণাটক মোট কতটি পদক পায় বলে ফাইলে উল্লেখ আছে?", answer: "11টি।" },
+{ id: 143, question: "Khelo India Beach Games 2026-এ কর্ণাটক কতটি সোনা জেতে বলে ফাইলে উল্লেখ আছে?", answer: "3টি।" },
+{ id: 144, question: "Khelo India Beach Games 2026-এ দ্বিতীয় স্থানে কোন রাজ্য ছিল?", answer: "তামিলনাড়ু।" },
+{ id: 145, question: "Khelo India Beach Games 2026-এ তৃতীয় স্থানে কোন রাজ্য ছিল?", answer: "মণিপুর।" },
+{ id: 146, question: "2026 সালের India Open Super 750 ব্যাডমিন্টনের পুরুষ এককে কে চ্যাম্পিয়ন হন?", answer: "লিন চুন-ই।" },
+{ id: 147, question: "India Open Super 750 2026-এর মহিলা এককে কে চ্যাম্পিয়ন হন?", answer: "আন সে-ইয়ং।" },
+{ id: 148, question: "India Open Super 750 2026 কোথায় অনুষ্ঠিত হয়?", answer: "ইন্দিরা গান্ধী ইন্ডোর স্টেডিয়াম, নয়াদিল্লি।" },
+{ id: 149, question: "2026 সালের Australian Open পুরুষ এককের চ্যাম্পিয়ন কে?", answer: "কার্লোস আলকারাজ।" },
+{ id: 150, question: "2026 সালের Australian Open পুরুষ এককের ফাইনালে কার্লোস আলকারাজ কাকে হারান?", answer: "নোভাক জকোভিচকে।" },
+{ id: 151, question: "2026 সালের Australian Open জিতে কার্লোস আলকারাজ কোন ঐতিহাসিক কৃতিত্ব অর্জন করেন?", answer: "তিনি ক্যারিয়ার গ্র্যান্ড স্ল্যাম সম্পূর্ণ করা সর্বকনিষ্ঠ পুরুষ হন।" },
+{ id: 152, question: "2026 সালের ICC Men's Player of the Month—December পুরস্কার কে পান?", answer: "মিচেল স্টার্ক।" },
+{ id: 153, question: "2026 সালের ICC Women's Player of the Month—December পুরস্কার কে পান?", answer: "লরা ভলভার্ড্ট।" },
+{ id: 154, question: "ডিসেম্বর 2025-এ মিচেল স্টার্ক কতটি টেস্টে 16টি উইকেট নেন?", answer: "তিনটি টেস্টে।" },
+{ id: 155, question: "2026 সালের 92তম ভারতীয় Chess Grandmaster কে হন?", answer: "আরিয়ান ভার্শনি।" },
+{ id: 156, question: "আরিয়ান ভার্শনি কোন দেশের প্রতিনিধিত্ব করেন?", answer: "ভারত।" },
+{ id: 157, question: "FIDE অনুযায়ী আরিয়ান ভার্শনি কোন সালে Grandmaster title পান?", answer: "2026 সালে।" },
+{ id: 158, question: "2025–26 Vijay Hazare Trophy-এর চ্যাম্পিয়ন কোন দল?", answer: "বিদর্ভ।" },
+{ id: 159, question: "Vijay Hazare Trophy 2025–26-এর ফাইনালে বিদর্ভ কাকে হারায়?", answer: "সৌরাষ্ট্রকে।" },
+{ id: 160, question: "WPL-এর ইতিহাসে প্রথম শতরানকারী ব্যাটার কে হন?", answer: "ন্যাট স্কিভার-ব্রান্ট।" },
+{ id: 161, question: "WPL-এ ন্যাট স্কিভার-ব্রান্ট কোন দলের হয়ে প্রথম শতরান করেন?", answer: "মুম্বাই ইন্ডিয়ান্স।" },
+{ id: 162, question: "WPL-এ ন্যাট স্কিভার-ব্রান্টের ঐতিহাসিক শতরান কত বলে আসে?", answer: "57 বলে অপরাজিত 100 রান।" },
+{ id: 163, question: "Finke River কোন দেশে অবস্থিত?", answer: "অস্ট্রেলিয়া।" },
+{ id: 164, question: "Finke River-কে কী হিসেবে উল্লেখ করা হয়েছে?", answer: "বিশ্বের অন্যতম প্রাচীন প্রবাহমান নদী।" },
+{ id: 165, question: "2026 সালের 300–400 বছর পুরোনো বিশাল Black Coral কোথায় আবিষ্কৃত হয়?", answer: "নিউজিল্যান্ডের কাছে গভীর সমুদ্রে।" },
+{ id: 166, question: "2026 সালের Tyler Prize for Environmental Achievement কে পান?", answer: "টবি কিয়ার্স।" },
+{ id: 167, question: "টবি কিয়ার্স কোন বিষয়ে গবেষণার জন্য Tyler Prize পান?", answer: "মাইকোরাইজাল ফাঙ্গাই নিয়ে গবেষণার জন্য।" },
+{ id: 168, question: "Tyler Prize-কে কোন পুরস্কারের সঙ্গে তুলনা করা হয়?", answer: "পরিবেশের নোবেল পুরস্কার।" },
+{ id: 169, question: "2026 সালের Responsible Nations Index-এ পাকিস্তানের অবস্থান কত বলে ফাইলে উল্লেখ আছে?", answer: "90তম।" },
+{ id: 170, question: "Responsible Nations Index-এ যুক্তরাষ্ট্রের অবস্থান কত বলে ফাইলে উল্লেখ আছে?", answer: "66তম।" },
+{ id: 171, question: "Responsible Nations Index-এ চীনের অবস্থান কত বলে ফাইলে উল্লেখ আছে?", answer: "68তম।" },
+{ id: 172, question: "2026 সালের BRICS-এর সভাপতিত্ব কোন দেশ করছে?", answer: "ভারত।" },
+{ id: 173, question: "BRICS 2026-এর থিম কী?", answer: "লচীলতা, উদ্ভাবন, সহযোগিতা ও স্থায়িত্বের জন্য নির্মাণ।" },
+{ id: 174, question: "BRICS 2026-এর লোগো কোন ফুল থেকে অনুপ্রাণিত?", answer: "পদ্ম।" },
+{ id: 175, question: "BRICS 2026-এর লোগোর কেন্দ্রে কোন প্রতীক রয়েছে?", answer: "নমস্তে।" },
+{ id: 176, question: "BRICS 2026-এর লোগোতে নমস্তে কী বোঝায়?", answer: "সম্মান ও সহযোগিতা।" },
+{ id: 177, question: "India Electricity Summit 2026 কোথায় অনুষ্ঠিত হওয়ার কথা রয়েছে?", answer: "যশোভূমি, নয়াদিল্লি।" },
+{ id: 178, question: "India Electricity Summit 2026 কবে অনুষ্ঠিত হওয়ার কথা রয়েছে?", answer: "19–22 মার্চ 2026।" },
+{ id: 179, question: "India Electricity Summit 2026-এর থিম কী?", answer: "‘Electrifying Growth, Empowering Sustainability, Connecting Globally’।" },
+{ id: 180, question: "2026 সালের দ্বিতীয় Global Buddhist Summit-এর আয়োজনে কোন মন্ত্রক সহযোগিতা করে?", answer: "সংস্কৃতি মন্ত্রক।" },
+{ id: 181, question: "PANKHUDI পোর্টালে কোন ধরনের অবদান গ্রহণের কথা সরকারি তথ্যসূত্রে বলা হয়েছে?", answer: "নগদ নয়, অন্যান্য ধরনের অবদান।" },
+{ id: 182, question: "PANKHUDI পোর্টাল কোন তিনটি বড় মিশনের সঙ্গে সমন্বয় করে?", answer: "Mission Saksham Anganwadi & Poshan 2.0, Mission Vatsalya ও Mission Shakti।" },
+{ id: 183, question: "PANKHUDI পোর্টাল কোন মন্ত্রকের একক-উইন্ডো ডিজিটাল প্ল্যাটফর্ম?", answer: "নারী ও শিশু উন্নয়ন মন্ত্রকের।" },
+{ id: 184, question: "কেরালার State Microbe নির্বাচনের জন্য কোন বিষয়গুলি বিবেচনা করা হয়েছিল?", answer: "বৈজ্ঞানিক গুরুত্ব, পরিবেশগত প্রাসঙ্গিকতা, জৈব-নিরাপত্তা ও সামাজিক-শিল্প সম্ভাবনা।" },
+{ id: 185, question: "Bacillus subtilis কী ধরনের ব্যাকটেরিয়া?", answer: "গ্রাম-পজিটিভ, স্পোর-গঠনকারী ব্যাকটেরিয়া।" },
+{ id: 186, question: "New Delhi World Book Fair 2026-এর Theme Pavilion-এর নাম কী?", answer: "‘Indian Military History: Valour and Wisdom @ 75’।" },
+{ id: 187, question: "New Delhi World Book Fair 2026-এ কতটির বেশি প্রকাশক অংশগ্রহণের কথা জানানো হয়েছিল?", answer: "1,000-এর বেশি।" },
+{ id: 188, question: "New Delhi World Book Fair 2026-এ কতটির বেশি দেশ থেকে প্রকাশক অংশ নেওয়ার কথা ছিল?", answer: "35টির বেশি দেশ থেকে।" },
+{ id: 189, question: "New Delhi World Book Fair 2026-এ কতটির বেশি অনুষ্ঠান হওয়ার কথা ছিল?", answer: "600টির বেশি।" },
+{ id: 190, question: "New Delhi World Book Fair 2026-এ বিশেষভাবে কোন তিনটি সামরিক সরঞ্জামের প্রতিরূপ প্রদর্শনের কথা ছিল?", answer: "অর্জুন ট্যাঙ্ক, INS Vikrant ও LCA Tejas।" },
+{ id: 191, question: "2026 সালের AERB-এর চেয়ারপার্সন হিসেবে কে দায়িত্ব নেন?", answer: "এ. কে. বালাসুব্রহ্মণিয়ান।" },
+{ id: 192, question: "AERB-এর সদর দপ্তর কোথায়?", answer: "মুম্বাইয়ের আনুশক্তিনগরে।" },
+{ id: 193, question: "Central Vigilance Commission-এর Vigilance Commissioner হিসেবে জানুয়ারি 2026-এ কে নিযুক্ত হন?", answer: "প্রবীণ বশিষ্ঠ।" },
+{ id: 194, question: "প্রবীণ বশিষ্ঠ কোন ক্যাডারের 1991 ব্যাচের IPS কর্মকর্তা?", answer: "বিহার ক্যাডারের।" },
+{ id: 195, question: "প্রবীণ বশিষ্ঠ কবে Vigilance Commissioner হিসেবে শপথ নেন?", answer: "16 জানুয়ারি 2026।" },
+{ id: 196, question: "2026 সালের Bajaj Pune Grand Tour-এর সমাপ্তি অনুষ্ঠান কোথায় হয়?", answer: "বালগন্ধর্ব রঙ্গমন্দির, পুনেতে।" },
+{ id: 197, question: "2026 সালের Bajaj Pune Grand Tour-এর ফাইনাল পর্যায় কোন ক্রীড়ার সঙ্গে সম্পর্কিত?", answer: "সাইক্লিং।" },
+{ id: 198, question: "2026 সালের Pune Grand Tour-এ ব্যক্তিগত চ্যাম্পিয়ন কে হন?", answer: "লুক মাডগওয়ে।" },
+{ id: 199, question: "2026 সালের Bajaj Pune Grand Tour-এর ফাইলে উল্লেখিত সদিচ্ছা দূত কে?", answer: "মহেন্দ্র সিং ধোনি।" }, 
+{ id: 200, question: "জানুয়ারি 2026-এর কারেন্ট অ্যাফেয়ার্সে ভারতের 92তম দাবা গ্র্যান্ডমাস্টার হিসেবে কার নাম দেওয়া হয়েছে?", answer: "আরিয়ান ভার্শনি।" } 
+  ];
+  
+  function question() {
+    const questionContainer = document.getElementById('question');
+    
+    questionData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'qa-card';
+        
+        card.innerHTML = `
+        <div class="question"><span class="q-no">${index + 1}.</span> ${item.question}</div>
+        <div class="answer" id="answer-${index}">
+        <strong class="a-no">উত্তর:</strong> ${item.answer}
+        </div>
+        `;
+      
+      questionContainer.appendChild(card);
+    });
+  }
+  
+  question();
+  
+  function goToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+  </script>
+</body>
+</html>
