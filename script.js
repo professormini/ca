@@ -56,24 +56,3 @@ function contentSearch() {
         }
     }
 };
-
-//3. Questions and Answers render
-function question() {
-    const questionContainer = document.getElementById('question');
-    
-    questionData.forEach((item, index) => {
-        const card = document.createElement('div');
-        card.className = 'qa-card';
-        
-        card.innerHTML = `
-        <div class="question"><span class="q-no">${index + 1}.</span> ${item.question}</div>
-        <div class="answer" id="answer-${index}">
-        <strong class="a-no">উত্তর:</strong> ${item.answer}
-        </div>
-        `;
-        
-        questionContainer.appendChild(card);
-    });
-}
-
-question();
