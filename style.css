@@ -5,9 +5,6 @@
   box-sizing: border-box;
   font-family: "Noto Serif Bengali";
 }
-.text-en{
-  font-family: "Roboto";
-}
 a{
   text-decoration: none;
   color: black;
@@ -100,20 +97,6 @@ main{
   width: 100%;
   background: #FFFFFF;
 }
-.table-container{
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-.table-name {
-  padding: 5px 30px;
-  background: linear-gradient(45deg, #000080, #9400D3, #000080);
-  opacity: 0.8;
-  color: #FFF;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 table{
   margin-top: 1px;
   width: 100%;
@@ -133,38 +116,6 @@ tbody tr:nth-child(even) {
   }
 tbody{
   font-family: Roboto;
-}
-.questions {
-  width: 100%;
-  border-top: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.questions .qa-card {
-  margin-bottom: 1px;
-  padding: 5px 0;
-  border-top: 0.5px solid;
-  border-bottom: 0.5px solid;
-  background-color: #faffff;
-}
-.questions .qa-card .question {
-  margin-bottom: 1px;
-  padding: 0 6px;
-  font-size: 16px;
-  font-weight: 600;
-}
-.questions .qa-card .question .q-no{
-  color: #b40404;
-  font-weight: 900;
-}
-.questions .qa-card .answer {
-  padding: 0 6px;
-  font-size: 15px;
-  font-weight: 600;
-}
-.questions .qa-card .answer .a-no{
-  color: #117a3d;
 }
 footer{
   margin: 0 5px;
@@ -186,6 +137,3 @@ footer{
     color: #FFF;
     font-size: 25px;
   }
-
-
-
